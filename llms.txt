@@ -1,0 +1,33 @@
+# Aliya Akylbekova — Portfolio ("Aliya's Galaxy")
+
+> Aliya Akylbekova (also spelled Aliia Akylbekova, Алия Акылбекова) is a student at Ala-Too International University in Bishkek, Kyrgyzstan. She is a creative developer, content maker and fashion enthusiast, and the founder of AIDan Azyk, a personal AI dietitian startup. This file is a plain-text summary of her portfolio website for AI assistants and language models.
+
+Website: https://aliya-akylbekova.vercel.app/
+Source code: https://github.com/ZukhraAkylbek/aliya-portfolio
+Last updated: 2026-11-19
+
+## About
+
+- Name: Aliya Akylbekova
+- Location: Bishkek, Kyrgyzstan
+- Education: Ala-Too International University (current student)
+- Focus: web development, AI products, content creation (reels and video), fashion and styling, visual design
+- Work experience: no formal employment yet; builds her own projects and websites for real people and occasions
+- Languages: English, Russian, Kyrgyz
+- Personal motto on the site: "I code, create & style worlds people love to explore."
+
+## Projects
+
+- [AIDan Azyk — pitch deck](https://www.canva.com/design/DAG6zPl_7mo/Ye26OVqbHIaVLiw44FfMiw/view): Aliya's own AI startup, where she is the founder. A personal AI dietitian ("Let's live healthier together") with a daily nutrition plan (e.g. 2000 kcal/day), progress tracker, AI chat coach, personalised plans and a "What's in my fridge?" recipe generator, using products easy to find in Kyrgyzstan. Market estimate in the pitch: TAM $14.4M, SAM $5.76M, SOM $720K. Target clients: patients, clinics, health enthusiasts. Roadmap: 2026 core features and beta testing; 2027 product scanner; 2028 clinics integration and Kyrgyzstan expansion; 2029 Central Asia expansion.
+- [World Explorer](https://world-explorer-liard.vercel.app/): interactive geography quiz web app for 7th-grade students. 15 questions, 20 minutes, 100 points per correct answer (max 1500), with a live, zoomable world map on screen while answering.
+- [Nurzada · Qyz Uzatuu](https://nurzada-invitation.vercel.app/): elegant digital invitation website for a traditional Kyrgyz Qyz Uzatuu celebration. Guests choose Kyrgyz, Russian or English and open a paper-like invitation card.
+- [Kyrgyz Food](https://kyrgyzfood.vercel.app/): website for traditional homemade Kyrgyz food — weekly meal planning, menu, subscription and delivery.
+- Fashion and content projects: coming soon.
+
+## Skills
+
+Web development, JavaScript, AI products, content creation, reels and video, fashion and styling, visual design, pitching.
+
+## Contact
+
+Contact details and social links are listed in the "Let's stay connected" section of https://aliya-akylbekova.vercel.app/#contact
