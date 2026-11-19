@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aliya Akylbekova — Creative Developer &amp; Content Maker</title>
+  <meta name="description" content="Aliya Akylbekova — creative developer, content maker and fashion lover from Bishkek. Projects, story and contact." />
+  <meta name="theme-color" content="#1c1b63" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Pinyon+Script&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- fixed starfield behind everything -->
+  <div class="sky" aria-hidden="true"><canvas id="stars"></canvas></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav is-hidden" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Home">A</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#work">The Galaxy</a>
+      <a href="#about">About Me</a>
+      <a href="#journey">The Orbit</a>
+      <a href="#contact">Say Hello</a>
+    </nav>
+  </header>
+
+  <!-- ============ PROLOGUE (scroll story) ============ -->
+  <section class="prologue" id="prologue" aria-label="Welcome">
+    <div class="stage">
+
+      <!-- planets -->
+      <div class="planet planet--big"  aria-hidden="true"></div>
+      <div class="planet planet--ring" aria-hidden="true"></div>
+      <div class="planet planet--small" aria-hidden="true"></div>
+      <div class="planet planet--peach" aria-hidden="true"></div>
+      <span class="comet" aria-hidden="true"></span>
+      <span class="comet comet--2" aria-hidden="true"></span>
+
+      <!-- title -->
+      <h1 class="stage__title">
+        <span class="chrome script">Aliya's</span>
+        <span class="chrome caps">Galaxy</span>
+      </h1>
+
+      <!-- glass character.
+           To use your own image (e.g. from Nano Banana): save it as images/character.png
+           (transparent background) — it replaces the SVG automatically. -->
+      <img class="glassgirl glassgirl--img" src="images/character.png" alt="" aria-hidden="true"
+           onload="this.nextElementSibling.remove()" onerror="this.remove()" />
+      <svg class="glassgirl" viewBox="0 0 300 520" aria-hidden="true">
+        <defs>
+          <linearGradient id="iri" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%"  stop-color="#c9c2ff" />
+            <stop offset="35%" stop-color="#f7b6dc" />
+            <stop offset="65%" stop-color="#ffd0a8" />
+            <stop offset="100%" stop-color="#8fa2ff" />
+            <animateTransform attributeName="gradientTransform" type="rotate" values="0 .5 .5;360 .5 .5" dur="14s" repeatCount="indefinite" />
+          </linearGradient>
+          <linearGradient id="iri2" x1="1" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#ffe3f3" />
+            <stop offset="50%" stop-color="#b9adff" />
+            <stop offset="100%" stop-color="#ffc59a" />
+          </linearGradient>
+          <radialGradient id="starglow">
+            <stop offset="0%" stop-color="#fff" />
+            <stop offset="40%" stop-color="#ffe6b8" />
+            <stop offset="100%" stop-color="#ffe6b8" stop-opacity="0" />
+          </radialGradient>
+          <filter id="soft"><feGaussianBlur stdDeviation="10" /></filter>
+        </defs>
+
+        <!-- glow behind -->
+        <ellipse cx="150" cy="260" rx="110" ry="200" fill="#f7b6dc" opacity=".35" filter="url(#soft)" />
+
+        <!-- flowing scarf -->
+        <path d="M142 214 C100 236 60 214 22 262 C60 246 96 258 140 230 Z" fill="url(#iri2)" opacity=".55" stroke="#fff" stroke-opacity=".7" stroke-width="1.2" />
+
+        <!-- hair -->
+        <path d="M150 84 C118 78 98 110 102 150 C106 192 78 224 52 256 C92 242 120 206 128 168 C132 142 140 122 152 112 Z" fill="url(#iri)" opacity=".6" stroke="#fff" stroke-opacity=".8" stroke-width="1.2" />
+
+        <!-- lower arm -->
+        <path d="M148 164 C128 192 118 222 110 254" fill="none" stroke="url(#iri2)" stroke-width="11" stroke-linecap="round" opacity=".75" />
+
+        <!-- dress -->
+        <path d="M150 150 C140 162 138 186 142 210 C120 262 92 332 70 424 C102 410 122 432 150 418 C176 434 206 410 238 430 C222 342 192 262 172 210 C176 186 175 162 168 150 Z"
+              fill="url(#iri)" opacity=".62" stroke="#fff" stroke-opacity=".85" stroke-width="1.4" />
+        <!-- dress highlights -->
+        <path d="M146 214 C128 262 108 330 92 400" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="3" stroke-linecap="round" />
+        <path d="M168 220 C182 270 196 320 206 380" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-linecap="round" />
+
+        <!-- raised arm -->
+        <path d="M168 160 C190 140 206 100 226 54" fill="none" stroke="url(#iri)" stroke-width="11" stroke-linecap="round" opacity=".8" />
+        <path d="M170 156 C190 136 204 100 222 58" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2" stroke-linecap="round" />
+
+        <!-- neck + head -->
+        <rect x="153" y="132" width="11" height="22" rx="5" fill="url(#iri2)" opacity=".7" />
+        <ellipse cx="160" cy="110" rx="23" ry="27" fill="url(#iri2)" opacity=".75" stroke="#fff" stroke-opacity=".9" stroke-width="1.4" />
+        <path d="M148 96 C150 90 156 87 162 87" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".9" />
+
+        <!-- star in her hand -->
+        <circle class="glassgirl__star" cx="228" cy="46" r="26" fill="url(#starglow)" />
+        <path d="M228 30 L231 43 L244 46 L231 49 L228 62 L225 49 L212 46 L225 43 Z" fill="#fff" />
+      </svg>
+
+      <!-- clouds -->
+      <div class="clouds" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <!-- story lines -->
+      <div class="story">
+        <p class="story__line" data-at="0.12">Leaving the ground…</p>
+        <p class="story__line" data-at="0.36">Collecting the stardust…</p>
+        <p class="story__line" data-at="0.6">You've arrived.</p>
+        <a href="#top" class="story__btn" data-at="0.66">Enter the galaxy</a>
+      </div>
+      <span class="stage__hint">scroll to fly</span>
+    </div>
+  </section>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <p class="mono reveal">Creative Developer · Content Maker · Fashion — Bishkek</p>
+      <h2 class="hero__title reveal">
+        Hi, I'm <span class="chrome script">Aliya</span><br />
+        I code, create &amp; style<br /><em>worlds</em> people love to explore.
+      </h2>
+      <a href="#work" class="pill reveal">See my galaxy ↓</a>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="section" id="work">
+      <p class="mono reveal">✦ The Galaxy — featured works</p>
+
+      <ol class="orbits">
+        <li class="reveal">
+          <a href="#p-aidan" class="orbit" data-preview="images/aidan-cover.jpg">
+            <span class="orbit__label mono">Planet A</span>
+            <span class="orbit__title">AIDan Azyk</span>
+            <span class="orbit__tags">AI Startup · Founder</span>
+            <span class="orbit__arrow">↗</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="#p-world" class="orbit" data-preview="images/world-explorer.png">
+            <span class="orbit__label mono">Planet B</span>
+            <span class="orbit__title">World Explorer</span>
+            <span class="orbit__tags">EdTech · Web App</span>
+            <span class="orbit__arrow">↗</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="#p-nurzada" class="orbit" data-preview="images/nurzada-invitation.png">
+            <span class="orbit__label mono">Planet C</span>
+            <span class="orbit__title">Nurzada · Qyz Uzatuu</span>
+            <span class="orbit__tags">Digital Invitation</span>
+            <span class="orbit__arrow">↗</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="#p-food" class="orbit" data-preview="images/kyrgyz-food.png">
+            <span class="orbit__label mono">Planet D</span>
+            <span class="orbit__title">Kyrgyz Food</span>
+            <span class="orbit__tags">Food Service · Web</span>
+            <span class="orbit__arrow">↗</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <span class="orbit orbit--soon">
+            <span class="orbit__label mono">Comet E</span>
+            <span class="orbit__title">Fashion &amp; content…</span>
+            <span class="orbit__tags">Coming soon</span>
+            <span class="orbit__arrow">✦</span>
+          </span>
+        </li>
+      </ol>
+      <img class="float-preview" id="floatPreview" alt="" aria-hidden="true" />
+
+      <!-- Project cards. Copy an <article class="card"> to add a new project. -->
+      <article class="card reveal" id="p-aidan">
+        <a href="https://www.canva.com/design/DAG6zPl_7mo/Ye26OVqbHIaVLiw44FfMiw/view" target="_blank" rel="noopener" class="card__img card__img--slide">
+          <img src="images/aidan-cover.jpg" alt="AIDan Azyk — personal AI dietitian, pitch deck cover" loading="lazy" />
+          <span class="card__badge mono">Pitch deck ↗</span>
+        </a>
+        <div class="card__body">
+          <span class="mono card__kicker">Planet A · AI Startup · Founder</span>
+          <h3>AIDan Azyk</h3>
+          <p>
+            My own startup: a personal AI dietitian that builds a daily
+            nutrition plan, tracks progress, chats like a coach and even
+            creates recipes from what's already in your fridge — with
+            products easy to find in Kyrgyzstan. <em>Let's live healthier, together.</em>
+          </p>
+          <ul class="facts">
+            <li><strong>Founder</strong><span>idea, product &amp; pitch</span></li>
+            <li><strong>AI</strong><span>chat · tracker · diet plan</span></li>
+            <li><strong>2026</strong><span>beta launch</span></li>
+          </ul>
+          <a href="https://www.canva.com/design/DAG6zPl_7mo/Ye26OVqbHIaVLiw44FfMiw/view" target="_blank" rel="noopener" class="pill pill--solid">View the pitch ↗</a>
+        </div>
+      </article>
+      <div class="shots reveal">
+        <img src="images/aidan-solution.jpg" alt="AIDan Azyk — solution: ration, tracker, AI chat, personalised plan" loading="lazy" />
+        <img src="images/aidan-market.jpg" alt="AIDan Azyk — market size TAM, SAM, SOM" loading="lazy" />
+        <img src="images/aidan-plan.jpg" alt="AIDan Azyk — development plan 2026–2029" loading="lazy" />
+      </div>
+
+      <article class="card card--flip reveal" id="p-world">
+        <a href="https://world-explorer-liard.vercel.app/" target="_blank" rel="noopener" class="card__img">
+          <img src="images/world-explorer.png" alt="World Explorer — interactive geography quiz on a world map" loading="lazy" />
+          <span class="card__badge mono">Live ↗</span>
+        </a>
+        <div class="card__body">
+          <span class="mono card__kicker">Planet B · EdTech</span>
+          <h3>World Explorer</h3>
+          <p>
+            An interactive geography quiz for 7th-grade students. Fifteen
+            questions, twenty minutes and a live world map that students can
+            move and zoom while they search for the answer — learning by
+            exploring, not memorising.
+          </p>
+          <ul class="facts">
+            <li><strong>15</strong><span>questions</span></li>
+            <li><strong>20</strong><span>minutes</span></li>
+            <li><strong>1500</strong><span>max score</span></li>
+          </ul>
+          <a href="https://world-explorer-liard.vercel.app/" target="_blank" rel="noopener" class="pill pill--solid">Visit project ↗</a>
+        </div>
+      </article>
+
+      <article class="card reveal" id="p-nurzada">
+        <a href="https://nurzada-invitation.vercel.app/" target="_blank" rel="noopener" class="card__img">
+          <img src="images/nurzada-invitation.png" alt="Nurzada — elegant digital invitation for a Qyz Uzatuu celebration" loading="lazy" />
+          <span class="card__badge mono">Live ↗</span>
+        </a>
+        <div class="card__body">
+          <span class="mono card__kicker">Planet C · Celebration</span>
+          <h3>Nurzada · Qyz Uzatuu</h3>
+          <p>
+            An elegant digital invitation for a traditional Qyz Uzatuu
+            celebration. Guests choose their language and open a refined,
+            paper-like card with all the details of the day — tradition,
+            told beautifully on any phone.
+          </p>
+          <ul class="facts">
+            <li><strong>3</strong><span>languages</span></li>
+            <li><strong>1</strong><span>link for all guests</span></li>
+            <li><strong>100%</strong><span>mobile-ready</span></li>
+          </ul>
+          <a href="https://nurzada-invitation.vercel.app/" target="_blank" rel="noopener" class="pill pill--solid">Visit project ↗</a>
+        </div>
+      </article>
+
+      <article class="card card--flip reveal" id="p-food">
+        <a href="https://kyrgyzfood.vercel.app/" target="_blank" rel="noopener" class="card__img">
+          <img src="images/kyrgyz-food.png" alt="Kyrgyz Food — traditional homemade food ordering website" loading="lazy" />
+          <span class="card__badge mono">Live ↗</span>
+        </a>
+        <div class="card__body">
+          <span class="mono card__kicker">Planet D · Food Service</span>
+          <h3>Kyrgyz Food</h3>
+          <p>
+            A friendly helper for planning homemade food for the week.
+            Traditional Kyrgyz dishes — from boorsok to manty — with a menu,
+            weekly subscription and delivery, all in one simple website.
+          </p>
+          <ul class="facts">
+            <li><strong>7</strong><span>days planned</span></li>
+            <li><strong>Menu</strong><span>&amp; subscription</span></li>
+            <li><strong>Home</strong><span>delivery</span></li>
+          </ul>
+          <a href="https://kyrgyzfood.vercel.app/" target="_blank" rel="noopener" class="pill pill--solid">Visit project ↗</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <p class="mono reveal">✦ More about myself</p>
+      <div class="about__grid">
+        <div class="glass about__card reveal">
+          <h3 class="about__title">A coder with a <em>stylist's</em> eye.</h3>
+          <!-- EDIT: your story -->
+          <p>
+            I'm Aliya — a student at Ala-Too International University in
+            Bishkek, and a creative who lives between code, content and
+            fashion. I build websites and digital products, film and edit
+            content, and care a lot about how things look and feel.
+          </p>
+          <p>
+            I love turning ideas into something real — from an AI startup
+            to an invitation for a family celebration. Style, details and a
+            little bit of magic are always part of the plan.
+          </p>
+          <div class="about__actions">
+            <a href="#journey" class="pill pill--solid">Know more</a>
+            <!-- EDIT: CV link -->
+            <a href="#" class="pill" target="_blank" rel="noopener">My resume ↗</a>
+          </div>
+          <p class="script about__sign">this is me, in orbit.</p>
+        </div>
+        <ul class="skills reveal">
+          <li>Web Development</li>
+          <li>JavaScript</li>
+          <li>AI Products</li>
+          <li>Content Creation</li>
+          <li>Reels &amp; Video</li>
+          <li>Fashion &amp; Styling</li>
+          <li>Visual Design</li>
+          <li>Pitching</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="section" id="journey">
+      <p class="mono reveal">✦ The Orbit — my journey</p>
+      <!-- EDIT: your real roles and education -->
+      <ol class="timeline">
+        <li class="glass timeline__item reveal">
+          <span class="mono">Now</span>
+          <h3>Ala-Too International University</h3>
+          <p>Student in Bishkek · learning, building and growing every day.</p>
+        </li>
+        <li class="glass timeline__item reveal">
+          <span class="mono">2026</span>
+          <h3>Founder · AIDan Azyk</h3>
+          <p>Created and pitched my own AI nutrition startup — from idea to product and market plan.</p>
+        </li>
+        <li class="glass timeline__item reveal">
+          <span class="mono">Always</span>
+          <h3>Creator &amp; Developer</h3>
+          <p>Websites for real people and occasions, plus content and fashion projects of my own.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <p class="mono reveal">✦ Let's stay connected</p>
+      <h2 class="contact__title reveal">Have an idea<br />waiting to <em>launch?</em></h2>
+      <p class="contact__note reveal">
+        For collaborations, questions or just to say hi — my signal is always on.
+      </p>
+      <div class="contact__actions reveal">
+        <!-- EDIT: real email and links -->
+        <a href="mailto:hello@aliya.com" class="pill pill--solid">Contact me</a>
+        <a href="#" class="pill" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" class="pill" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#" class="pill" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="mono">© <span id="year">2026</span> Aliya Akylbekova</span>
+    <span class="script">made among the stars</span>
+    <a href="#prologue" class="mono">Back to the sky ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
